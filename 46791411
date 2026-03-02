@@ -1,0 +1,50 @@
+local StarterGui = game:GetService("StarterGui")
+
+-- ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "CustomUI"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = StarterGui
+
+-- الفريم الأساسي (هو المرجع)
+local container = Instance.new("Frame")
+container.Size = UDim2.new(0, 650, 0, 400)
+container.Position = UDim2.new(0.5, -325, 0.5, -200)
+container.BackgroundTransparency = 1
+container.Parent = screenGui
+
+-- الفريم الكبير (يمين)
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 480, 0, 300)
+mainFrame.Position = UDim2.new(0, 170, 0, 80)
+mainFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = container
+
+local mainCorner = Instance.new("UICorner")
+mainCorner.CornerRadius = UDim.new(0,15)
+mainCorner.Parent = mainFrame
+
+-- الفريم الجانبي (يسار)
+local sideFrame = Instance.new("Frame")
+sideFrame.Size = UDim2.new(0, 150, 0, 300)
+sideFrame.Position = UDim2.new(0, 0, 0, 80)
+sideFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
+sideFrame.BorderSizePixel = 0
+sideFrame.Parent = container
+
+local sideCorner = Instance.new("UICorner")
+sideCorner.CornerRadius = UDim.new(0,15)
+sideCorner.Parent = sideFrame
+
+-- الفريم العلوي
+local topFrame = Instance.new("Frame")
+topFrame.Size = UDim2.new(0, 480, 0, 60)
+topFrame.Position = UDim2.new(0, 170, 0, 0)
+topFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
+topFrame.BorderSizePixel = 0
+topFrame.Parent = container
+
+local topCorner = Instance.new("UICorner")
+topCorner.CornerRadius = UDim.new(0,15)
+topCorner.Parent = topFrame
